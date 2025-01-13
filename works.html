@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регламентные работы</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #ffffff, #3a248a);
+            color: #000000;
+            font-family: 'Times New Roman', sans-serif;
+        }
+
+        .navbar {
+            background-color: #4f15ad;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .reglament-item {
+            margin-bottom: 20px;
+        }
+
+        .btn-container .btn {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn-container .btn:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Навбар -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Интерактивное электронное техническое руководство для ПО учета продукции</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1 class="text-center">Регламентные работы</h1>
+    <div class="reglament-item">
+        <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#reglamentModal"
+                onclick="showReglamentInfo('Сверка распознанных данных', 'Ежедневно', '1. Подготовка к работе<br>1.1. Проверка доступа: Убедитесь, что у вас есть доступ к необходимым системам и базам данных.<br>1.2. Обновление данных: Убедитесь, что все данные в системе обновлены до последней версии.<br><br>2. Получение данных<br>2.1. Экспорт данных: Экспортируйте распознанные данные из системы распознавания.<br>2.2. Импорт данных: Импортируйте данные из внешних источников или баз данных, с которыми будет проводиться сверка.<br><br>3. Сверка данных<br>3.1. Предварительная проверка: Проверьте формат и структуру данных на соответствие требованиям.<br>3.2. Автоматическая сверка:<br>Запустите скрипт или программу для автоматической сверки данных.<br>Проверьте наличие расхождений между распознанными данными и данными из внешних источников.<br>3.3. Ручная проверка:<br>Проверьте критически важные данные вручную.<br>Сравните ключевые поля и значения.<br>           <br>4. Анализ результатов<br>4.1. Идентификация расхождений: Составьте список всех обнаруженных расхождений.<br>4.2. Классификация ошибок: Классифицируйте ошибки по типам (например, ошибки распознавания, ошибки ввода данных и т.д.).<br>4.3. Причины расхождений: Определите возможные причины расхождений.<br><br>5. Корректировка данных<br>5.1. Исправление ошибок: Внесите необходимые исправления в распознанные данные.<br>5.2. Обновление системы: Обновите систему распознавания с учетом выявленных ошибок и расхождений.<br><br>6. Отчетность<br>6.1. Составление отчета: Составьте отчет о проведенной сверке данных.<br>Включите в отчет количество проверенных записей, количество и типы обнаруженных ошибок, причины расхождений и внесенные исправления.<br>6.2. Представление отчета: Представьте отчет руководству или ответственному лицу.<br><br>7. Завершение работы<br>7.1. Архивирование данных: Архивируйте все использованные данные и отчеты.<br>7.2. Обновление документации: Обновите внутреннюю документацию с учетом результатов сверки.<br>')">
+           Сверка распознанных данных
+        </button>
+    </div>
+    <div class="reglament-item">
+        <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#reglamentModal"
+                onclick="showReglamentInfo('Сверка списанной продукции еды', 'Ежедневно', 'Шаг 1: Подготовьте необходимые документы и инструменты.<BR>Шаг 2: Проверьте наличие всех списанных товаров в системе.<BR>Шаг 3: Сравните данные в системе с фактическими данными на складе.<BR>Шаг 4: В случае расхождений, задокументируйте их и уведомьте ответственное лицо.<BR>Шаг 5: Проведите повторную проверку после устранения расхождений.<BR>Шаг 6: Завершите процесс, подписав акт сверки.')"> 
+            Сверка списанной продукции еды
+        </button>
+    </div>
+    <div class="reglament-item">
+        <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#reglamentModal"
+                onclick="showReglamentInfo('Уборка рабочего места', 'Ежедневно', 'Уборка рабочего места включает в себя следующие шаги:<BR>1. Удалите все ненужные бумаги и мусор.<BR>2. Протрите поверхность стола влажной тряпкой.<BR>3. Замойте кофемашинку.<BR>4. Убедитесь, что все кабели и провода аккуратно уложены.<BR>5. Протрите пыль с оборудования и мебели.<BR>6. Выбросьте мусор в установленное для этого место.<BR>7. Проверьте, что все личные вещи убраны и не мешают работе.<BR>8. Убедитесь, что рабочее место выглядит опрятно и готово к использованию.<BR>')">
+                    Уборка рабочего места
+        </button>
+    </div>
+    <div class="reglament-item">
+        <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#reglamentModal"
+                onclick="showReglamentInfo('Проверка состояния сервера', 'Ежемесячно', 'Инструкция по выполнению регламентной работы «Проверка состояния сервера»:<BR>1. Подключитесь к серверу через SSH.<BR>2. Проверьте текущую загрузку процессора с помощью команды top.<BR>3. Проверьте использование памяти с помощью команды free -m.<BR>4. Проверьте состояние дискового пространства с помощью команды df -h.<BR>5. Проверьте состояние сетевых соединений с помощью команды netstat -tuln.<BR>6. Проверьте логи системы на наличие ошибок с помощью команды tail -f /var/log/syslog.<BR>7. Завершите сеанс и запишите результаты проверки в отчет.')">
+            Проверка состояния сервера
+                
+        </button>
+    </div>
+    
+</div>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="reglamentModal" tabindex="-1" aria-labelledby="reglamentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reglamentModalLabel">Регламентная работа</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h6 id="reglamentTitle"></h6>
+                <p><strong>Периодичность:</strong> <span id="reglamentPeriodicity"></span></p>
+                <p><strong>Инструкция:</strong></p>
+                <p id="reglamentInstructions"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Подключение Bootstrap JS и зависимости -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function showReglamentInfo(title, periodicity, instructions) {
+        const reglamentTitle = document.getElementById('reglamentTitle');
+        const reglamentPeriodicity = document.getElementById('reglamentPeriodicity');
+        const reglamentInstructions = document.getElementById('reglamentInstructions');
+
+        reglamentTitle.textContent = title;
+        reglamentPeriodicity.textContent = periodicity;
+        reglamentInstructions.innerHTML = instructions;
+    }
+</script>
+</body>
+</html>
